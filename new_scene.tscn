@@ -1,0 +1,102 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://span_limiter.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.749146
+margin_right = 0.749146
+__meta__ = {
+"_edit_use_anchors_": false,
+"first_node_for": NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Control/MarginContainer")
+}
+
+[node name="InnerVBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+margin_right = -1.0
+margin_bottom = 68.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OuterMarginContainer" type="MarginContainer" parent="InnerVBoxContainer"]
+margin_right = 1023.0
+margin_bottom = 20.0
+custom_constants/margin_top = 6
+custom_constants/margin_left = 2
+
+[node name="Result" type="Label" parent="InnerVBoxContainer/OuterMarginContainer"]
+margin_left = 2.0
+margin_top = 6.0
+margin_right = 1023.0
+margin_bottom = 20.0
+text = "Result:"
+
+[node name="OuterSpanLimiter" type="Container" parent="InnerVBoxContainer"]
+margin_top = 24.0
+margin_right = 1023.0
+margin_bottom = 68.0
+script = ExtResource( 1 )
+rect_max_size = Vector2( 640, 1e+07 )
+
+[node name="PanelContainer" type="PanelContainer" parent="InnerVBoxContainer/OuterSpanLimiter"]
+margin_left = 191.5
+margin_right = 831.5
+margin_bottom = 44.0
+
+[node name="InnerHBoxContainer" type="HBoxContainer" parent="InnerVBoxContainer/OuterSpanLimiter/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 633.0
+margin_bottom = 37.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OuterMarginContainer3" type="MarginContainer" parent="InnerVBoxContainer/OuterSpanLimiter/PanelContainer/InnerHBoxContainer"]
+margin_right = 542.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+custom_constants/margin_left = 5
+
+[node name="Question" type="Label" parent="InnerVBoxContainer/OuterSpanLimiter/PanelContainer/InnerHBoxContainer/OuterMarginContainer3"]
+margin_left = 5.0
+margin_top = 8.0
+margin_right = 542.0
+margin_bottom = 22.0
+text = "Are you sure?"
+
+[node name="OuterMarginContainer" type="MarginContainer" parent="InnerVBoxContainer/OuterSpanLimiter/PanelContainer/InnerHBoxContainer"]
+margin_left = 542.0
+margin_right = 586.0
+margin_bottom = 30.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="Yes" type="Button" parent="InnerVBoxContainer/OuterSpanLimiter/PanelContainer/InnerHBoxContainer/OuterMarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 39.0
+margin_bottom = 25.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+text = "Yes"
+
+[node name="OuterMarginContainer2" type="MarginContainer" parent="InnerVBoxContainer/OuterSpanLimiter/PanelContainer/InnerHBoxContainer"]
+margin_left = 586.0
+margin_right = 626.0
+margin_bottom = 30.0
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="No" type="Button" parent="InnerVBoxContainer/OuterSpanLimiter/PanelContainer/InnerHBoxContainer/OuterMarginContainer2"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 35.0
+margin_bottom = 25.0
+text = "No"
